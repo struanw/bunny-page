@@ -1,9 +1,29 @@
+var React = require('react')
 var ReactDOM = require('react-dom')
-var People = require('./components/People')
-var peopleData = require('./data')
 
 
-var view = People(peopleData)
+function App (props) {
+  return (
+    <div>
+      <Heading />
+      <Repos />
+    </div>
+  )
+}
+
+function Heading (props) {
+  return (
+    <h1>HEADING</h1>
+  )
+}
+
+function Repos (props) {
+  return ( 
+    <div>repos</div>
+  )
+}
+
+var view = App()
 
 var placeToMount = document.getElementById('root')
 
