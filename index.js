@@ -1,17 +1,9 @@
-var React = require('react')
 var ReactDOM = require('react-dom')
+var data = require('./data.js')
+var components = require('./components.js')
 
-
-function helloTemplate (props) {
-  return (
-    <div>hello {props.name}</div>
-  ) 
-}
-
-var data = { name: 'mix' }
-var view = helloTemplate(data)
+var view = components(data)
 
 var placeToMount = document.getElementById('root')
 
 ReactDOM.render(view, placeToMount)
-
