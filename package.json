@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "build": "browserify -t babelify index.js -o bundle.js"
+    "build": "browserify -t babelify index.js -o bundle.js -dv",
+    "watch": "watchify -t babelify index.js -o bundle.js -dv"
   },
   "babel": {
     "presets": [
