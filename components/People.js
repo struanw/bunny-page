@@ -9,7 +9,7 @@ function People (props) {
     <div>
       {props.people.map(function(person){
         return (
-          <div>{person.name} is {person.age} years old</div>
+          <div>{person.name} dog {person.age} years old</div>
         )
       })}
     </div>
