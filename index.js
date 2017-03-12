@@ -13,8 +13,8 @@ var data = {
 function App (props) {
   return (
     <div>
-      {Heading({ name: props.name })}
-      {Friends({ people: props.people })}
+      <Heading name={props.name} />
+      <Friends people={props.people} />
     </div>
   )
 }
