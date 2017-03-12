@@ -1,0 +1,12 @@
+h1 {
+  color: red
+}
+
+.day {
+  color: blue
+}
+
+.weather {
+  color: green;
+  font-weight:bold;
+}
