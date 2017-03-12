@@ -1,18 +1,5 @@
-var React = require('react')
 var ReactDOM = require('react-dom')
-
-
-function helloTemplate (props) {
-  return (
-    <div>
-      {props.people.map(function(person){
-        return (
-          <div>{person.name} is {person.age} years old</div>
-        )
-      })}
-    </div>
-  ) 
-}
+var People = require('./components/People.js')
 
 var data = {
   people: [
@@ -22,7 +9,7 @@ var data = {
   ]
 }
 
-var view = helloTemplate(data)
+var view = People(data)
 
 var placeToMount = document.getElementById('root')
 
