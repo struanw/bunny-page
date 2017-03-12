@@ -1,29 +1,48 @@
 var React = require('react')
 var ReactDOM = require('react-dom')
 
+var data = {
+  name: 'mix',
+  people: [
+    { name: 'mix', age: 32},
+    { name: 'mikey', age: 24},
+    { name: 'piet', age: 33}
+  ]
+}
 
 function App (props) {
   return (
     <div>
-      <Heading />
-      <Repos />
+      {Heading(props)}
+      {Friends(props)}
     </div>
   )
 }
 
 function Heading (props) {
   return (
-    <h1>HEADING</h1>
+    <h1>Hello {props.name}</h1>
   )
 }
 
-function Repos (props) {
+function Friends (props) {
+  var people = props.people
+
   return ( 
-    <div>repos</div>
+    <div>
+      <h2>Your friends</h2>
+      {people.map(function(individual) {
+        return (
+          <div>
+            {individual.name} who is {individual.age}
+          </div>
+        )
+      })}
+    </div>
   )
 }
 
-var view = App()
+var view = App(data)
 
 var placeToMount = document.getElementById('root')
 
