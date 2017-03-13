@@ -1,9 +1,20 @@
+var React = require('react')
 var ReactDOM = require('react-dom')
-var People = require('./components/People')
+var Beers = require('./components/Beers')
+var BeerDetails = require('./components/BeerDetails')
 var data = require('./data')
 
-var view = People(data)
+function app (props) {
+  return (
+    <div>
+      {Beers(props)}
+      {BeerDetails(props)}
+    </div>
+  )
+}
 
-var placeToMount = document.getElementById('root')
+var view = app(data)
 
-ReactDOM.render(view, placeToMount)
+var root = document.getElementById('root')
+
+ReactDOM.render(view, root)
