@@ -11,7 +11,7 @@ function helloTemplate (props) {
   )
 }
 
-function SayHello (props){
+function SayHello (props) {
   return (
     <div>Hello {props.aName}</div>
   )
@@ -20,16 +20,14 @@ function SayHello (props){
 
 
 
-function helloFriends (props){
+function helloFriends (props) {
   var friends = props.people
 
   return(
     <div>
-      {friends.map(function(individual){
+      {friends.map(function(individual) {
         return (
-          <div>
-            {individual.name} who is {individual.age}
-          </div>
+          <HiFriend individual={individual} />
         )
       })}
     </div>
@@ -37,8 +35,14 @@ function helloFriends (props){
 }
 
 
-// function HiFriends (person) {
-//   return(
-//
-//   )
-// }
+function HiFriend (props) {
+  // var name = props.individual.name
+  // var age = props.individual.age
+  var { name, age } = props.individual
+
+  return(
+    <div>
+      {name} who is {age}
+    </div>
+  )
+}
