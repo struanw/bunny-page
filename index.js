@@ -1,33 +1,44 @@
 var React = require('react')
 var ReactDOM = require('react-dom')
 var data = require("./animals-data.js")
-console.log(data);
 
-function animalsTemplate (props) {
+function zooTemplate (props) {
   return (
     <div>
-      {props.details.map(function(detail){
+      <Heading name={props.name}/>
+      <AnimalInfo details={props.details}/>
+    </div>
+  )
+}
+
+function Heading (props) {
+  var name = props.name
+
+  return (
+    <div>
+      <h1>{name}'s Zoo!</h1>
+      <h2>List of animals:</h2>
+    </div>
+  )
+}
+
+function AnimalInfo (props) {
+  var animalDetails = props.details
+
+  return (
+    <div>
+      {animalDetails.map(function(individual){
         return (
-          <div>{detail.name} is a {detail.species} and is {detail.age} years old.</div>
+          <li>
+            {individual.name} is a {individual.species} and is {individual.age} years old.
+          </li>
         )
       })}
     </div>
   )
 }
 
-// function Heading (props) {
-//   return (
-//     <h1>Animal Information!</h1>
-//   )
-// }
-//
-// function animalInfo (props) {
-//   return (
-//
-//   )
-// }
-
-var view = animalsTemplate(data.animals)
+var view = zooTemplate(data.animals)
 
 var placeToMount = document.getElementById('root')
 

@@ -1,7 +1,8 @@
 var animals = {
+  name: 'Aidan',
   details: [
-    { name: 'ralph', animal: 'dog', age: '6' },
-    { name: 'buffy', animal: 'cat', age: '4' }
+    { name: 'Ralph', animal: 'dog', age: '6' },
+    { name: 'Buffy', animal: 'cat', age: '4' }
   ]
 }
 
