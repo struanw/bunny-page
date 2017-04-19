@@ -7,10 +7,9 @@ function helloTemplate (props) {
   )
 }
 
-var data = { name: 'mix' }
+var data = { name: 'Don' }
 var view = helloTemplate(data)
 
 var placeToMount = document.getElementById('root')
 
 ReactDOM.render(view, placeToMount)
-

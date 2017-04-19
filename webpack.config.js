@@ -1,7 +1,10 @@
+var path = require('path')
+var LiveReloadPlugin = require('webpack-livereload-plugin')
+
 module.exports = {
   entry: './client/index.js',
   output: {
-    path: './public',
+    path: path.join(__dirname, '/public'),
     filename: 'bundle.js'
   },
   module: {
@@ -11,7 +14,10 @@ module.exports = {
       exclude: /node_modules/
     }]
   },
+  plugins: [
+    new LiveReloadPlugin()
+  ],
   resolve: {
-    extensions: ['', '.js', '.jsx']
+    extensions: ['.js', '.jsx']
   }
 }
