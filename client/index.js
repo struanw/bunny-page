@@ -1,11 +1,11 @@
 const React = require('react')
 const ReactDOM = require('react-dom')
 
-const data = { name: 'humans' }
+const data = { name: 'Bunny' }
 
 function helloTemplate (props) {
   return (
-    <div>hello {props.name}</div>
+    <div>{props.name}</div>
   )
 }
 
